@@ -15,7 +15,7 @@ type Interface interface {
 func New(client http.Client) TacticChecker {
 	return TacticChecker{
 		httpClient:   client,
-		failedPixels: make(map[string][]string, 0),
+		FailedPixels: make(map[string][]string, 0),
 	}
 
 }
