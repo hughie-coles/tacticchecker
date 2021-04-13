@@ -44,6 +44,10 @@ type TacticChecker struct {
 
 func (tc *TacticChecker) CheckTactic(tactic []string) {
 
+	if len(tactic) < 9 {
+		return
+	}
+
 	impressionPixelJsonColumn := tactic[8]
 	var pixelsInTactic []string
 	json.Unmarshal([]byte(impressionPixelJsonColumn), &pixelsInTactic)
